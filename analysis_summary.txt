@@ -1,0 +1,36 @@
+
+📌 Dataset Overview: Flight Delay Causes and Prediction
+
+This dataset contains monthly aggregated flight arrival statistics for different airlines and airports in the United States.
+Each row represents a unique (carrier, airport, month, year) combination. It is used to analyze and predict flight delays.
+
+🔹 Temporal Features:
+- year: Year of the record
+- month: Month of the record
+→ These help capture seasonal and yearly trends in flight delays
+
+🔹 Airline Information:
+- carrier: IATA code of the airline (e.g., "AA")
+- carrier_name: Full name of the airline (used for display)
+
+🔹 Airport Information:
+- airport: IATA code of the airport (e.g., "LAX")
+- airport_name: Full name of the airport (used for display)
+
+🔹 Flight and Delay Statistics:
+- arr_flights: Total number of arriving flights per month
+- arr_del15: Number of flights delayed more than 15 minutes
+→ Delay Rate = arr_del15 / arr_flights
+
+🔹 Cancellation & Diversion:
+- arr_cancelled: Number of canceled flights
+- arr_diverted: Number of diverted flights
+
+🔹 Delay Duration (in Minutes):
+- arr_delay: Total delay time in minutes across all delayed flights
+
+💡 Early EDA Insights:
+- The dataset has missing values, especially in delay reason columns, which were handled by row dropping.
+- Delay patterns are strongly seasonal — summer and winter months show more delays.
+- Some airports consistently report higher delays.
+- Delay ratio and total delay time are skewed features and may need transformation.
